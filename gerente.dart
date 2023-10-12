@@ -1,9 +1,24 @@
 import 'dart:math';
 
-class Gerente {
-  String? nome;
+import '../office/fucionario.dart';
 
-  Gerente({String? this.nome}) {}
+class Gerente extends Funcionario {
+  String nome;
+
+  Gerente(
+      {required String this.nome,
+      required String setor,
+      required String cpf,
+      required int idade,
+      required double salario})
+      : super(
+            cargo: "Gerente",
+            cpf: cpf,
+            idade: idade,
+            nome: nome,
+            salarioBase: salario,
+            setor: setor,
+            porcentagemDeBonus: 0.2) {}
 
   void pensarNoAumento(nomeDoInfeliz) {
     int possibilidade = Random().nextInt(50);

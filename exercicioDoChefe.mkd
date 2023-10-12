@@ -1,0 +1,100 @@
+1. Agora usando condicionais crie a opção do funcionário pedir:
+# aumento
+# reconhecimento
+# férias
+Faça a tratativa da entrada do usuário e então print o retorno.
+
+
+2. Agora usando while mantenha o terminal aberto para o funcionário continue pedindo o que ele quer até que ele consiga ou que ele estoure a paciência do chefe pedindo mais de 4 vezes.
+Use menu numerado para o funcionário escolher o que ele quer pedir. As opções são as mesmas de cima.
+
+
+3. Agora separe todos as possíveis resposta do chefe em funções fora da função main. e este seu código para ver se ele está funcionando corretamente.
+
+ 
+
+
+
+
+
+
+
+4. Separe as classes de gerente e funcionário em arquivos diferentes e importe-as para o seu código principal.
+
+
+5. Adicione a classe de funcionário os seguinte atributos:
+- nome
+- idade
+- cpf
+- salario
+- cargo
+
+
+6. Na classe gerente faça uma alteração para que agora ela seja subclasse da classe funcionário e tenha os atributos:
+- setor
+Construa também seu método construtor para setar os valores na instancia do objeto.
+
+
+
+
+7. Na classe vendedor faça uma alteração para que agora ela seja subclasse da  classe funcionário e tenha os atributos:
+- vendas
+- comissão
+Construa também seu método construtor para setar os valores na instancia do objeto.
+
+
+8. Crie uma classe de atendente que herde da classe funcionário e tenha os atributos:
+- setor 
+Construa também seu método construtor para setar os valores na instancia do objeto.
+
+
+9. Refatore as classes para não terem atributos iguais, ou seja, se um atributo é igual em duas classes, ele deve estar na classe pai.
+
+
+10. Agora crie um atributo na classe funcionário chamado bonus e faça com que o gerente tenha um bonus de 20% do seu salário, o vendedor 15% e o atendente 10%.
+
+
+11. Na classe funcionário crie um método para calcular o salário total do funcionário, somando o salário com o bônus.
+
+
+12. Crie um método para validar o bonus do funcionário, se o funcionário não tiver um cargo válido o bonus deve ser 0.
+
+
+13. Na classe do vendedor crie um método para verificar se o vendedor bateu a meta de vendas, se sim ele deve receber um comissão de 10% do seu salário senão ele não recebe o comissão. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14. Agora transforme a classe funcionário em uma classe abstrata para que não seja possível criar um funcionário genérico.
+
+15. Torne todos os atributos da classe funcionário privados.
+
+16. Em nossa empresa não temos programa de jovem aprendiz e por isso não podemos aceitar que um cadastro de funcionário seja criado para idade menor de 18. Crie uma regra para validar isso.
+
+17. Como agora não é possível criar um funcionário genérico podemos definir os cargos automaticamente dentro de cada sub-classe de funcionário.
+
+18. Altere o método pensarNoAumento onde quando o funcionário conseguir um aumento aumente 2% no salário base do funcionário.
+
+19. Crie uma lista no método main onde são armazenados os funcionários destaque.
+
+20. Altere o método pensarNoReconhecimento onde quando o funcionário conseguir o reconhecimento o nome dele seja adicionado na lista.
+
+

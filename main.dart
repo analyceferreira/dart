@@ -4,8 +4,18 @@ import 'fucionario.dart';
 import 'gerente.dart';
 
 void main() {
-  Funcionario funcionarioQualquer = new Funcionario(nome: "João");
-  Gerente gerenteChato = new Gerente(nome: "Maria");
+  // Funcionario funcionarioQualquer = new Funcionario(nome: "João");
+  Gerente gerenteChato = new Gerente(
+      nome: "Maria",
+      cpf: "44444444444",
+      idade: 18,
+      salario: 2000,
+      setor: "Vendas");
+
+  print(gerenteChato.salario);
+  // print(gerenteChato.porcentagemDeBonus);
+
+  print(gerenteChato.salario);
 
   print(">-- Você chega no trabalho e vai até a sala do seu chefe.");
   print(">-- Seu chefe está na porta.");
