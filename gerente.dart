@@ -35,7 +35,7 @@ class Gerente extends Funcionario {
   bool pensarNoReconhecimento(nomeDoInfeliz) {
     int possibilidade = Random().nextInt(50);
 
-    if (true) {
+    if (possibilidade == 49) {
       print(
           ">-- Seu chefe diz: $nomeDoInfeliz vou pensar se voce merece infeliz.");
       return true;
