@@ -20,24 +20,28 @@ class Gerente extends Funcionario {
             setor: setor,
             porcentagemDeBonus: 0.2) {}
 
-  void pensarNoAumento(nomeDoInfeliz) {
+  bool pensarNoAumento(nomeDoInfeliz) {
     int possibilidade = Random().nextInt(50);
 
     if (possibilidade == 41) {
       print(">-- Seu chefe diz: $nomeDoInfeliz vou pensar no seu aumento.");
+      return true;
     } else {
       print(">-- Seu chefe diz: Infeliz pare de gastar meu tempo.");
+      return false;
     }
   }
 
-  void pensarNoReconhecimento(nomeDoInfeliz) {
+  bool pensarNoReconhecimento(nomeDoInfeliz) {
     int possibilidade = Random().nextInt(50);
 
-    if (possibilidade == 49) {
+    if (true) {
       print(
           ">-- Seu chefe diz: $nomeDoInfeliz vou pensar se voce merece infeliz.");
+      return true;
     } else {
       print(">-- Seu chefe diz: Reconhecimento? Pare de gastar meu tempo.");
+      return false;
     }
   }
 

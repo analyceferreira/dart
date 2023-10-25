@@ -1,10 +1,13 @@
 import 'dart:io';
 
+import 'atendente.dart';
 import 'fucionario.dart';
 import 'gerente.dart';
 
 void main() {
-  // Funcionario funcionarioQualquer = new Funcionario(nome: "João");
+  List<Funcionario> funcionariosDestaque = [];
+  Funcionario funcionarioQualquer = new Atendente(
+      nome: "", cpf: "11111111111", idade: 18, salario: 1000, setor: "Vendas");
   Gerente gerenteChato = new Gerente(
       nome: "Maria",
       cpf: "44444444444",
@@ -22,7 +25,7 @@ void main() {
   print(">-- Seu chefe diz: Quem é você?");
   print("Digite seu nome:");
 
-  String nome = stdin.readLineSync()!;
+  funcionarioQualquer.nome = stdin.readLineSync()!;
 
   print(">-- Seu chefe diz: O que você quer?");
   print("Digite 1 para aumento.");
@@ -40,13 +43,33 @@ void main() {
     String funcionarioQuer = stdin.readLineSync()!;
 
     if (funcionarioQuer == "1") {
-      gerenteChato.pensarNoAumento(nome);
+      bool conseguiuAumento =
+          gerenteChato.pensarNoAumento(funcionarioQualquer.nome);
+
+      if (conseguiuAumento) {
+        print("Seu salario era ${funcionarioQualquer.salario}");
+        funcionarioQualquer.calcularNovoSalario(0.02);
+        print("Seu novo salario é ${funcionarioQualquer.salario}");
+
+        break;
+      }
+
       tentativa += 1;
     } else if (funcionarioQuer == "2") {
-      gerenteChato.pensarNoReconhecimento(nome);
+      bool conseguiuReconhecimento =
+          gerenteChato.pensarNoReconhecimento(funcionarioQualquer.nome);
+
+      if (conseguiuReconhecimento) {
+        funcionariosDestaque.add(funcionarioQualquer);
+        print("Agora você faz parte do grupo de destaque.");
+        for (Funcionario func in funcionariosDestaque) {
+          print(func.nome);
+        }
+      }
+
       tentativa += 1;
     } else if (funcionarioQuer == "3") {
-      gerenteChato.pensarNasSuasFerias(nome);
+      gerenteChato.pensarNasSuasFerias(funcionarioQualquer.nome);
       tentativa += 1;
     } else {
       print(">-- Seu chefe diz: Não entendi. O que você que?");
